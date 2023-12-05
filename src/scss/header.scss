@@ -1,0 +1,138 @@
+body {
+  overflow-x: hidden;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Inter', sans-serif;
+}
+
+.header {
+  padding-top: 15px;
+  &_logo {
+    a {
+      img {
+        max-width: 95px;
+      }
+    }
+  }
+  &__nav {
+    display: flex;
+    gap: 32px;
+    @media screen and 
+    (max-width:992px){
+      display: none;
+    }
+    a {
+      color: #667085;
+      font-size: 16px;
+      line-height: 24px;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+  &__cart {
+    @media screen and 
+  (max-width:992px){
+    display: none;
+  }
+    a {
+      background-color: #7F56D9;
+      color: #FFFFFF;
+      font-size: 16px;
+      line-height: 24px;
+      padding: 12px 34px 12px 34px;
+      border-radius: 10px;
+      transition: 0.5s;
+      border: 1px solid #7F56D9;
+    }
+    a:hover {
+      color:#7F56D9;
+      background-color: #FFFFFF;
+      transition: 0.5s;
+    }
+  }
+  &__mobile-menu-body-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    a {
+      color: black;
+      font-size: 16px;
+      line-height: 24px;
+      @media screen and 
+      (max-width:768px){
+       font-size: 14px;
+      }
+    }
+  }
+  &__mobile-menu {
+  position: absolute;
+  transition: 0.5s ease;
+  transform: translateX(110%);
+  top:0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background-color: #7F56D9;
+  box-shadow: -2px 4px 4px 3px rgba(49,46,46,0.09);
+  z-index: 100;
+  }
+  &__mobile-menu.active {
+    transform: none;
+   }
+   &__mobile-menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   }
+   &__mobile-menu-title {
+    font-size: 25px;
+    @media screen and 
+    (max-width:768px){
+     font-size: 20px;
+    }
+   }
+  &__mobile-menu-close {
+    max-width: 55px;
+    cursor: pointer;
+    @media screen and 
+    (max-width:768px){
+    max-width: 45px;
+    }
+  }
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 50;
+  align-items: center;
+  justify-content: flex-end;
+  width: 28px;
+  height: 12px;
+  @media screen and 
+  (max-width:992px){
+    display: flex;
+  }
+  span {
+    height: 2px;
+    width: 80%;
+    transform: scale(1);
+    background-color: black;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: black;
+    transition: all 0.3s ease 0s;
+   top:0;
+    bottom: 7px;
+  }
+}

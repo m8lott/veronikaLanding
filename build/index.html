@@ -6,7 +6,7 @@
 	<meta name="viewport"
 				content="width=device-width, initial-scale=1.0">
 	<meta name="description"
-				content="Gulp pack for easy html/php markup development">
+				content="">
 	<meta name="keywords"
 				content="">
 	<link rel="shortcut icon"
@@ -22,12 +22,55 @@
 				href="css/libs.min.css">
 	<link rel="stylesheet"
 				href="css/style.min.css">
-	<title>Easy-webdev-startpack v3.0</title>
+	<title>Veronika landing</title>
 </head>
 
 
 <body>
-	<header class="header"></header>
+	<header class="header">
+  <div class="container">
+    <div class="header__logo">
+      <a href="#">
+      <img src="../../img/common/logo.svg" alt="">
+    </a>
+    </div>
+    <div class="header__nav">
+      <a href="#">Home</a>
+      <a href="#">Projects</a>
+      <a href="#">Blog</a>
+      <a href="#">Shop</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </div>
+    <div class="header__cart">
+      <a href="#">Cart</a>
+    </div>
+    <div class="burger">
+      <span></span>
+    </div>
+    <div class="header__mobile-menu">
+      <div class="header__mobile-menu-header">
+        <div class="header__mobile-menu-title">
+          Menu
+        </div>
+        <div>
+          <img class="header__mobile-menu-close" src="../../img/header/header.svg" alt="Закрыть">
+        </div> 
+      </div>
+      <div class="header__mobile-menu-body">
+        <div class="header__mobile-menu-body-nav">
+          <a class="header__mobile-menu-nav-link" href="#">Home</a>
+          <a class="header__mobile-menu-nav-link" href="#">Projects</a>
+          <a class="header__mobile-menu-nav-link" href="#">Blog</a>
+          <a class="header__mobile-menu-nav-link" href="#">Shop</a>
+          <a class="header__mobile-menu-nav-link" href="#">About</a>
+          <a class="header__mobile-menu-nav-link" href="#">Contact</a>
+        </div>
+      </div>
+  </div>
+  </div>
+</header>
+
 
 	<main class="main"></main>
 	<footer class="footer"></footer>
@@ -36,5 +79,24 @@
 <script src="js/main.min.js"></script>
 
 </body>
+<script>
+  let hamburger = document.querySelector('.burger');
+let menu = document.querySelector('.header__mobile-menu');
+let close = document.querySelector('.header__mobile-menu-close');
+let links = document.querySelectorAll('.header__mobile-menu-nav-link');
 
+
+hamburger.addEventListener('click', () => {
+  menu.classList.add('active');
+})
+close.addEventListener('click', () => {
+  menu.classList.remove('active');
+})
+
+for (let link of links) {
+  link.addEventListener('click', () => {
+    menu.classList.remove('active');
+  })
+}
+</script>
 </html>
