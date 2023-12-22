@@ -1,0 +1,81 @@
+.baner {
+  margin-top: 95px;
+  @media screen and (max-width: 992px) {
+    margin-top: 70px;
+  }
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px;
+    @media screen and (max-width: 992px) {
+      flex-direction: column;
+    }
+  }
+  &__left-title {
+    font-family: "Oswald", sans-serif;
+    color: #101828;
+    font-size: 63px;
+    line-height: 90px;
+    max-width: 961px;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    @media screen and (max-width: 992px) {
+      position: static;
+      font-size: 50px;
+      line-height: 77px;
+    }
+    @media screen and (max-width: 762px) {
+      font-size: 40px;
+      line-height: 67px;
+    }
+  }
+  &__left-text {
+    font-family: "Inter", sans-serif;
+    color: #667085;
+    font-size: 20px;
+    line-height: 30px;
+    max-width: 376px;
+    width: 100%;
+    margin-top: 300px;
+    @media screen and (max-width: 992px) {
+      margin-top: 30px;
+    }
+  }
+  &__right {
+    position: relative;
+    @media screen and (max-width: 992px) {
+      position: static;
+    }
+  }
+  &__right-img {
+    margin-top: 125px;
+    max-width: 800px;
+    width: 100%;
+    @media screen and (max-width: 992px) {
+      margin-top: 50px;
+    }
+    img {
+      position: relative;
+      top: 0;
+      left: 0;
+      right: 20px;
+      @media screen and (max-width: 992px) {
+        position: static;
+      }
+    }
+  }
+  &__right-img-deco {
+    max-width: 600px;
+    width: 100%;
+    position: absolute;
+    top: 320px;
+    left: 100px;
+    @media screen and (max-width: 1300px) {
+      display: none;
+    }
+  }
+}
