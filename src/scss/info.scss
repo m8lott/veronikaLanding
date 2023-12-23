@@ -1,0 +1,102 @@
+.info {
+  margin-top: 190px;
+  @media screen and (max-width: 992px) {
+    margin-top: 90px;
+  }
+  &__container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  &__top {
+    display: flex;
+    flex-direction: column;
+  }
+  &__top-title {
+    font-family: "Oswald", sans-serif;
+    font-size: 60px;
+    line-height: 72px;
+    color: #101828;
+    padding-bottom: 105px;
+    @media screen and (max-width: 992px) {
+      font-size: 50px;
+      line-height: 62px;
+      padding-bottom: 60px;
+    }
+    @media screen and (max-width: 768px) {
+      font-size: 40px;
+      line-height: 52px;
+    }
+  }
+  &__top-img {
+    align-self: flex-end;
+    position: relative;
+    @media screen and (max-width: 992px) {
+      position: static;
+    }
+    img:first-child {
+      width: 100%;
+      max-width: 280px;
+      position: absolute;
+      top: 250px;
+      left: -150px;
+      z-index: 10;
+      @media screen and (max-width: 992px) {
+        display: none;
+      }
+    }
+    img:last-child {
+      width: 100%;
+      max-width: 800px;
+      position: relative;
+      @media screen and (max-width: 992px) {
+        position: static;
+      }
+    }
+  }
+  &__bottom {
+    max-width: 768px;
+    margin: auto;
+    padding-top: 130px;
+    @media screen and (max-width: 992px) {
+      padding-top: 60px;
+    }
+  }
+  &__bottom-text {
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    line-height: 30px;
+    color: #667085;
+    max-width: 681px;
+    padding-bottom: 50px;
+    @media screen and (max-width: 992px) {
+      padding-bottom: 30px;
+    }
+    p:first-child {
+      padding-bottom: 30px;
+    }
+    @media screen and (max-width: 992px) {
+      font-size: 15px;
+      line-height: 25px;
+    }
+  }
+  &__bottom-btn {
+    padding: 0px 0px 10px 0px;
+    a {
+      background-color: #7f56d9;
+      color: #ffffff;
+      font-family: "Inter", sans-serif;
+      font-size: 16px;
+      line-height: 24px;
+      padding: 10px 34px 10px 34px;
+      border-radius: 10px;
+      transition: 0.5s;
+      border: 1px solid #7f56d9;
+    }
+    a:hover {
+      color: #7f56d9;
+      background-color: #ffffff;
+      transition: 0.5s;
+    }
+  }
+}
