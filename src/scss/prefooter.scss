@@ -1,0 +1,24 @@
+.prefooter {
+  margin-top: 250px;
+  @media screen and (max-width: 992px) {
+    margin-top: 150px;
+  }
+  &__container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  &__content {
+    font-family: "Oswald", sans-serif;
+    font-size: 56px;
+    line-height: 72px;
+    color: #101828;
+    @media screen and (max-width: 992px) {
+      font-size: 46px;
+      line-height: 62px;
+    }
+    span {
+      color:#6941C6;
+    }
+  }
+}
