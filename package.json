@@ -1,6 +1,7 @@
 {
-  "name": "veronika-landing",
+  "name": "veronica-landing",
   "version": "3.1.1",
+  "homepage": "https://m8lott.github.io/veronikaLanding/",
   "description": "",
   "main": "gulpfile.js",
   "scripts": {
@@ -9,7 +10,9 @@
     "php": "gulp dev_php",
     "build": "gulp libs_style && gulp svg_css && gulp ttf && gulp fonts && gulp style && gulp libs_js && gulp build_js && gulp rastr && gulp webp && gulp svg_sprite && gulp html && gulp php",
     "ftp": "gulp deploy",
-    "build-ftp": "npm run build && npm run ftp"
+    "build-ftp": "npm run build && npm run ftp",
+    "deploy": "gh-pages -d build",
+    "predeploy": "npm run build"
   },
   "author": "",
   "license": "ISC",
@@ -44,6 +47,7 @@
     "vinyl-ftp": "^0.6.1"
   },
   "dependencies": {
+    "gh-pages": "^6.1.1",
     "sass": "^1.56.0"
   }
 }
